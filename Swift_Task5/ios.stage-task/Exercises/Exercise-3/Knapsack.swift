@@ -16,26 +16,6 @@ public final class Knapsack {
         self.foods = foods
     }
     
-    func findMaxKilometres(asd: Int) -> Int {
-        
-        let foodMatrix = getMatrix(for: foods)
-        let drinkMatrix = getMatrix(for: drinks)
-        
-        var returnedValue = 0
-        
-        for food in foodMatrix[foods.count] {
-            for drink in drinkMatrix[drinks.count] {
-                
-                let minValue = min(food, drink)
-                if minValue > returnedValue {
-                    returnedValue = minValue
-                }
-            }
-        }
-        
-        return returnedValue
-    }
-    
     func findMaxKilometres() -> Int {
         
         let foodMatrix = getMatrix(for: foods)
